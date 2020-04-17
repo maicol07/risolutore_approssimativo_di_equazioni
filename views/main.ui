@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
+ <author>maicol07</author>
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
   <property name="geometry">
@@ -41,12 +42,15 @@
      <rect>
       <x>20</x>
       <y>110</y>
-      <width>321</width>
+      <width>701</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Inserisci equazione secondo la &lt;/span&gt;&lt;a href=&quot;https://en.wikibooks.org/wiki/Python_Programming/Basic_Math&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;sintassi di Python&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Inserisci equazione secondo la &lt;/span&gt;&lt;a href=&quot;https://en.wikibooks.org/wiki/Python_Programming/Basic_Math&quot;&gt;&lt;span style=&quot; font-size:12pt; text-decoration: underline; color:#0000ff;&quot;&gt;sintassi LaTex&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; (vedi Aiuto --&amp;gt; LaTex per aiuto sul formato LaTex):&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="openExternalLinks">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="logo">
@@ -115,6 +119,9 @@
       <string>Metodo di bisezione</string>
      </attribute>
      <widget class="QTableWidget" name="bisezioneTable">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -231,7 +238,7 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>630</x>
       <y>180</y>
       <width>111</width>
       <height>23</height>
@@ -243,6 +250,32 @@
     <property name="icon">
      <iconset>
       <normaloff>../img/graph.svg</normaloff>../img/graph.svg</iconset>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>180</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Equazione inserita: &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="equationLabel">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>170</y>
+      <width>411</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
@@ -272,6 +305,7 @@
     <property name="title">
      <string>Aiuto</string>
     </property>
+    <addaction name="actionLaTex"/>
     <addaction name="actionInformazioni"/>
    </widget>
    <addaction name="menuFile"/>
@@ -282,7 +316,7 @@
   <action name="actionEsci">
    <property name="icon">
     <iconset>
-     <normaloff>../img/icons/log-out.svg</normaloff>../img/icons/log-out.svg</iconset>
+     <normaloff>../img/log-out.svg</normaloff>../img/log-out.svg</iconset>
    </property>
    <property name="text">
     <string>Esci</string>
@@ -301,6 +335,11 @@
   <action name="actionInformazioni">
    <property name="text">
     <string>Informazioni</string>
+   </property>
+  </action>
+  <action name="actionLaTex">
+   <property name="text">
+    <string>LaTex</string>
    </property>
   </action>
  </widget>
