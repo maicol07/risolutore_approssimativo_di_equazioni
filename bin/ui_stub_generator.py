@@ -15,7 +15,7 @@ def generate_stubs(file):
     for widget in root.findall('.//widget'):
         name = widget.get('name')
         cls = widget.get('class')
-        print('        self.window.{} = QtWidgets.{}()'.format(
+        print('        self.{} = QtWidgets.{}()'.format(
             name, cls
         ))
 

@@ -1,39 +1,30 @@
 from PySide2 import QtWidgets
 from PySide2.QtWidgets import QApplication
-from PySide2.QtUiTools import QUiLoader
+from lib.UiLoader import loadUi
 from PySide2.QtCore import QFile
 
 
-class Window(QtWidgets.QWidget):
-    def __init__(self, app: QApplication, view: str):
+class Window(QtWidgets.QMainWindow):
+    def __init__(self, view: str):
         """
         Window constructor
 
         Parameters
         ----------
-        app: QApplication
-            The QApplication parent object
         view: str
             The name of the view to load
         """
-        super().__init__()
+        super(Window, self).__init__()
         ui_file = QFile("views/{}.ui".format(view))
         ui_file.open(QFile.ReadOnly)
 
-        loader = QUiLoader(self)
-        self.window = loader.load(ui_file, self)
+        loadUi(ui_file, self, workingDirectory="views/")
         ui_file.close()
 
-        self.window.show()
+        self.show()
 
     def __stubs(self):
-        """
-        This just enables code completion. It should never be called
-
-        Returns
-        -------
-
-        """
+        """ This just enables code completion. It should never be called """
         self.MainWindow = QtWidgets.QMainWindow()
         self.centralwidget = QtWidgets.QWidget()
         self.title = QtWidgets.QLabel()
@@ -47,6 +38,8 @@ class Window(QtWidgets.QWidget):
         self.NewtonTab = QtWidgets.QWidget()
         self.newtonTable = QtWidgets.QTableWidget()
         self.graphButton = QtWidgets.QPushButton()
+        self.label = QtWidgets.QLabel()
+        self.equationLabel = QtWidgets.QLabel()
         self.menubar = QtWidgets.QMenuBar()
         self.menuFile = QtWidgets.QMenu()
         self.menuStrumenti = QtWidgets.QMenu()
