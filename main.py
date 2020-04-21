@@ -1,11 +1,9 @@
 from PySide2.QtWidgets import QApplication
 import sys
-from src.Window import Window
+from src.windows.Window import Window
 
 app = QApplication(sys.argv)
 
-window = Window(app, "main")
-print(window.label_2.text())
+window = Window("main")
 
 app.exec_()
-

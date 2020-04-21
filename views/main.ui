@@ -8,15 +8,15 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>647</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Risolutore approssimativo di equazioni</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>../img/F_of_x.svg</normaloff>../img/F_of_x.svg</iconset>
+   <iconset resource="../resources/resources.qrc">
+    <normaloff>:/images/F_of_x.svg</normaloff>:/images/F_of_x.svg</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="title">
@@ -25,7 +25,7 @@
       <x>170</x>
       <y>30</y>
       <width>601</width>
-      <height>71</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -41,13 +41,19 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>110</y>
+      <y>90</y>
       <width>701</width>
-      <height>31</height>
+      <height>51</height>
      </rect>
     </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Inserisci equazione secondo la &lt;/span&gt;&lt;a href=&quot;https://en.wikibooks.org/wiki/Python_Programming/Basic_Math&quot;&gt;&lt;span style=&quot; font-size:12pt; text-decoration: underline; color:#0000ff;&quot;&gt;sintassi LaTex&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; (vedi Aiuto --&amp;gt; LaTex per aiuto sul formato LaTex):&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Inserisci equazione secondo la &lt;/span&gt;&lt;a href=&quot;https://en.wikibooks.org/wiki/Python_Programming/Basic_Math&quot;&gt;&lt;span style=&quot; font-size:12pt; text-decoration: underline; color:#0000ff;&quot;&gt;sintassi LaTex&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; (vedi Aiuto --&amp;gt; LaTex per aiuto sul formato LaTex) e l'intervallo entro cui trovare la soluzione:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
     </property>
     <property name="openExternalLinks">
      <bool>true</bool>
@@ -57,7 +63,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>30</y>
+      <y>10</y>
       <width>131</width>
       <height>71</height>
      </rect>
@@ -66,7 +72,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../img/F_of_x.svg</pixmap>
+     <pixmap>C:/Users/maico/.designer/img/F_of_x.svg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -85,16 +91,16 @@
      <string>OK</string>
     </property>
     <property name="icon">
-     <iconset>
-      <normaloff>../img/check.svg</normaloff>../img/check.svg</iconset>
+     <iconset resource="../resources/resources.qrc">
+      <normaloff>:/images/check.svg</normaloff>:/images/check.svg</iconset>
     </property>
    </widget>
    <widget class="QLineEdit" name="equationLineEdit">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>20</x>
       <y>150</y>
-      <width>591</width>
+      <width>601</width>
       <height>20</height>
      </rect>
     </property>
@@ -105,8 +111,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>220</y>
+      <x>10</x>
+      <y>280</y>
       <width>761</width>
       <height>331</height>
      </rect>
@@ -238,8 +244,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>180</y>
+      <x>640</x>
+      <y>260</y>
       <width>111</width>
       <height>23</height>
      </rect>
@@ -248,15 +254,15 @@
      <string>APRI GRAFICO</string>
     </property>
     <property name="icon">
-     <iconset>
-      <normaloff>../img/graph.svg</normaloff>../img/graph.svg</iconset>
+     <iconset resource="../resources/resources.qrc">
+      <normaloff>:/images/graph.svg</normaloff>:/images/graph.svg</iconset>
     </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>180</y>
+      <x>50</x>
+      <y>230</y>
       <width>161</width>
       <height>31</height>
      </rect>
@@ -268,14 +274,66 @@
    <widget class="QLabel" name="equationLabel">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>170</y>
+      <x>220</x>
+      <y>220</y>
       <width>411</width>
       <height>51</height>
      </rect>
     </property>
     <property name="text">
      <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>190</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Inizio intervallo:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="StartIntervalDoubleSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>190</y>
+      <width>61</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>190</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Fine intervallo:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="doubleSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>190</y>
+      <width>62</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::PlusMinus</enum>
+    </property>
+    <property name="value">
+     <double>1.000000000000000</double>
     </property>
    </widget>
   </widget>
@@ -315,8 +373,8 @@
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionEsci">
    <property name="icon">
-    <iconset>
-     <normaloff>../img/log-out.svg</normaloff>../img/log-out.svg</iconset>
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/images/log-out.svg</normaloff>:/images/log-out.svg</iconset>
    </property>
    <property name="text">
     <string>Esci</string>
@@ -343,6 +401,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="../resources/resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

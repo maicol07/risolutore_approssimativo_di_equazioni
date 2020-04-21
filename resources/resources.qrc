@@ -1,0 +1,8 @@
+<RCC>
+  <qresource>
+    <file>images/check.svg</file>
+    <file>images/F_of_x.svg</file>
+    <file>images/graph.svg</file>
+    <file>images/log-out.svg</file>
+  </qresource>
+</RCC>
