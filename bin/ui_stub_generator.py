@@ -18,6 +18,14 @@ def generate_stubs(file):
         print('        self.{} = QtWidgets.{}()'.format(
             name, cls
         ))
+    for action in root.findall('.//addaction'):
+        name = action.get('name')
+        if 'menu' in name:
+            continue
+        cls = 'QAction'
+        print('        self.{} = QtWidgets.{}()'.format(
+            name, cls
+        ))
 
     print('        raise AssertionError("This should never be called")')
     print()

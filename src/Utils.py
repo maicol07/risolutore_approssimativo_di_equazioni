@@ -1,9 +1,23 @@
 from io import BytesIO
+
 import matplotlib.pyplot as plt
 
 
 def renderLatex(formula, fontsize=12, dpi=300, format='svg', file=None):
-    """Renders LaTeX formula into image or prints to file.
+    """
+    Renders LaTeX formula into image or prints to file.
+
+    Parameters
+    ----------
+    formula
+    fontsize
+    dpi
+    format
+    file
+
+    Returns
+    -------
+
     """
     fig = plt.figure(figsize=(0.01, 0.01))
     text = fig.text(0, 0, u'${}$'.format(formula), fontsize=fontsize)

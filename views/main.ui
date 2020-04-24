@@ -8,7 +8,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>647</height>
+    <height>701</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,7 +16,8 @@
   </property>
   <property name="windowIcon">
    <iconset resource="../resources/resources.qrc">
-    <normaloff>:/images/F_of_x.svg</normaloff>:/images/F_of_x.svg</iconset>
+    <normaloff>:/images/function.svg</normaloff>:/images/function.svg
+   </iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="title">
@@ -62,8 +63,8 @@
    <widget class="QLabel" name="logo">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>10</y>
+      <x>20</x>
+      <y>20</y>
       <width>131</width>
       <height>71</height>
      </rect>
@@ -72,7 +73,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>C:/Users/maico/.designer/img/F_of_x.svg</pixmap>
+     <pixmap resource="../resources/resources.qrc">:/images/F_of_x.svg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -114,11 +115,14 @@
       <x>10</x>
       <y>280</y>
       <width>761</width>
-      <height>331</height>
+      <height>381</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true"/>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
     </property>
     <widget class="QWidget" name="bisezioneTab">
      <attribute name="title">
@@ -139,6 +143,9 @@
       <property name="frameShape">
        <enum>QFrame::Box</enum>
       </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
       <property name="cornerButtonEnabled">
        <bool>false</bool>
       </property>
@@ -146,7 +153,7 @@
        <number>8</number>
       </property>
       <property name="columnCount">
-       <number>8</number>
+       <number>7</number>
       </property>
       <row/>
       <row/>
@@ -158,40 +165,52 @@
       <row/>
       <column>
        <property name="text">
-        <string>a(n)</string>
+        <string>a</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>b(n)</string>
+        <string>b</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>f(a(n))</string>
+        <string>f(a)</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>f(b(n))</string>
+        <string>f(b)</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>x(n)</string>
+        <string>c</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>f(x(n))</string>
+        <string>f(c)</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>ε(n)</string>
+        <string>ε</string>
        </property>
       </column>
-      <column/>
+     </widget>
+     <widget class="QLabel" name="bisezioneResultLabel">
+      <property name="geometry">
+       <rect>
+        <x>16</x>
+        <y>310</y>
+        <width>721</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="NewtonTab">
@@ -201,9 +220,9 @@
      <widget class="QTableWidget" name="newtonTable">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>310</x>
         <y>10</y>
-        <width>731</width>
+        <width>131</width>
         <height>281</height>
        </rect>
       </property>
@@ -217,7 +236,7 @@
        <number>8</number>
       </property>
       <property name="columnCount">
-       <number>8</number>
+       <number>1</number>
       </property>
       <row/>
       <row/>
@@ -227,14 +246,24 @@
       <row/>
       <row/>
       <row/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
-      <column/>
+      <column>
+       <property name="text">
+        <string>x</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QLabel" name="newtonResultLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>310</y>
+        <width>721</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
      </widget>
     </widget>
    </widget>
@@ -297,7 +326,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Inizio intervallo:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="StartIntervalDoubleSpinBox">
+   <widget class="QDoubleSpinBox" name="startIntervalDoubleSpinBox">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -320,7 +349,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Fine intervallo:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QDoubleSpinBox" name="doubleSpinBox">
+   <widget class="QDoubleSpinBox" name="endIntervalDoubleSpinBox">
     <property name="geometry">
      <rect>
       <x>580</x>
@@ -343,7 +372,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -356,8 +385,8 @@
     <property name="title">
      <string>Strumenti</string>
     </property>
-    <addaction name="actionCronologi"/>
-    <addaction name="actionOpzioni"/>
+    <addaction name="actionCronologia"/>
+    <addaction name="actionImpostazioni"/>
    </widget>
    <widget class="QMenu" name="menuAiuto">
     <property name="title">
@@ -365,6 +394,7 @@
     </property>
     <addaction name="actionLaTex"/>
     <addaction name="actionInformazioni"/>
+    <addaction name="actionInformazioniQt"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuStrumenti"/>
@@ -374,30 +404,61 @@
   <action name="actionEsci">
    <property name="icon">
     <iconset resource="../resources/resources.qrc">
-     <normaloff>:/images/log-out.svg</normaloff>:/images/log-out.svg</iconset>
+     <normaloff>:/images/log-out.svg</normaloff>:/images/log-out.svg
+    </iconset>
    </property>
    <property name="text">
     <string>Esci</string>
    </property>
   </action>
-  <action name="actionCronologi">
+  <action name="actionCronologia">
+   <property name="icon">
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/images/history.svg</normaloff>:/images/history.svg
+    </iconset>
+   </property>
    <property name="text">
     <string>Cronologia</string>
    </property>
   </action>
-  <action name="actionOpzioni">
+  <action name="actionImpostazioni">
+   <property name="icon">
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/images/gear.svg</normaloff>:/images/gear.svg
+    </iconset>
+   </property>
    <property name="text">
-    <string>Opzioni</string>
+    <string>Impostazioni</string>
    </property>
   </action>
   <action name="actionInformazioni">
+   <property name="icon">
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/images/info.svg</normaloff>:/images/info.svg
+    </iconset>
+   </property>
    <property name="text">
     <string>Informazioni</string>
    </property>
   </action>
   <action name="actionLaTex">
+   <property name="icon">
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/images/latex.svg</normaloff>:/images/latex.svg
+    </iconset>
+   </property>
    <property name="text">
     <string>LaTex</string>
+   </property>
+  </action>
+  <action name="actionInformazioniQt">
+   <property name="icon">
+    <iconset resource="../resources/resources.qrc">
+     <normaloff>:/images/qt.svg</normaloff>:/images/qt.svg
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Informazioni su Qt</string>
    </property>
   </action>
  </widget>

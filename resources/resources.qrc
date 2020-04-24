@@ -1,8 +1,14 @@
 <RCC>
   <qresource>
+    <file>images/latex.svg</file>
+    <file>images/qt.svg</file>
     <file>images/check.svg</file>
     <file>images/F_of_x.svg</file>
+    <file>images/gear.svg</file>
+    <file>images/function.svg</file>
     <file>images/graph.svg</file>
+    <file>images/history.svg</file>
+    <file>images/info.svg</file>
     <file>images/log-out.svg</file>
   </qresource>
 </RCC>

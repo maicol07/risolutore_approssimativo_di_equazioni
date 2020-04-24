@@ -1,9 +1,11 @@
-from PySide2.QtWidgets import QApplication
 import sys
-from src.windows.Window import Window
+
+from PySide2.QtWidgets import QApplication
+
+from src.windows.MainWindow import MainWindow
 
 app = QApplication(sys.argv)
 
-window = Window("main")
+window = MainWindow()
 
 app.exec_()
