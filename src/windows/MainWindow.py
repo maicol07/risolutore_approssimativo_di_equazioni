@@ -1,39 +1,15 @@
 import warnings
 
-try:
-    import numpy
-    from PySide2 import QtWidgets
-    from PySide2.QtGui import QPixmap
-    from PySide2.QtCore import QSettings
-    from PySide2.QtWidgets import QErrorMessage, QTableWidgetItem, QMessageBox, QFileDialog
-    from matplotlib import MatplotlibDeprecationWarning
-    from sympy import plot_implicit, latex, lambdify, sign, N, E, symbols
-    from sympy.abc import e
-    from sympy.parsing.latex import parse_latex
-except ImportError:
-    import subprocess
-    import sys
-    import os
+import numpy
+from PySide2 import QtWidgets
+from PySide2.QtCore import QSettings
+from PySide2.QtGui import QPixmap
+from PySide2.QtWidgets import QErrorMessage, QTableWidgetItem, QMessageBox
+from matplotlib import MatplotlibDeprecationWarning
+from sympy import plot_implicit, latex, lambdify, sign, N, E, symbols
+from sympy.abc import e
+from sympy.parsing.latex import parse_latex
 
-    subprocess.call('pip install -r requirements.txt', cwd=os.getcwd())
-finally:
-    try:
-        import numpy
-        from PySide2 import QtWidgets
-        from PySide2.QtGui import QPixmap
-        from PySide2.QtCore import QSettings
-        from PySide2.QtWidgets import QErrorMessage, QTableWidgetItem, QMessageBox, QFileDialog
-        from matplotlib import MatplotlibDeprecationWarning
-        from sympy import plot_implicit, latex, lambdify, sign, N, E, symbols
-        from sympy.abc import e
-        from sympy.parsing.latex import parse_latex
-    except ImportError:
-        import tkinter.messagebox as tkmb
-
-        tkmb.showerror('Errore!', 'Non è possibile importare le librerie esterne necessarie per il funzionamento del '
-                                  'programma.\nSi prega di installarle con il seguente comando:\npip install -r '
-                                  'requirements.txt')
-        exit()
 from src import Utils
 from src.windows.Settings import Settings
 from src.windows.Window import get_window
